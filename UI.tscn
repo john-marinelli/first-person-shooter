@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://UI/UI_Square.png" type="Texture" id=1]
+[ext_resource path="res://Font/new_dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://UI.gd" type="Script" id=3]
+
+[node name="UI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthBar" type="TextureProgress" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 19.2996
+margin_top = -52.7935
+margin_right = 219.3
+margin_bottom = -20.7935
+value = 50.0
+texture_under = ExtResource( 1 )
+texture_progress = ExtResource( 1 )
+tint_under = Color( 0.25098, 0.25098, 0.25098, 1 )
+tint_progress = Color( 0.733333, 0, 0, 1 )
+nine_patch_stretch = true
+
+[node name="AmmoText" type="Label" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 19.2996
+margin_top = -97.137
+margin_right = 123.3
+margin_bottom = -61.137
+custom_fonts/font = ExtResource( 2 )
+text = "Ammo: "
+
+[node name="ScoreText" type="Label" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 19.2996
+margin_top = -138.856
+margin_right = 123.3
+margin_bottom = -102.856
+custom_fonts/font = ExtResource( 2 )
+text = "Score: "
